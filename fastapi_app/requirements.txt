@@ -1,0 +1,10 @@
+fastapi
+groq
+uvicorn
+pandas
+deep_translator
+numpy
+sentence_transformers
+faiss-cpu
+pyyaml
+spacy==3.7.0

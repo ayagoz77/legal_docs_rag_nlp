@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  fastapi_app:
+    build: ./fastapi_app
+    container_name: fastapi_app
+    # ports:
+    #   - "8000:8000"
+    restart: always
+    network_mode: host
+
+  telegram_bot:
+    build: ./telegram_bot
+    container_name: telegram_bot
+    depends_on:
+      - fastapi_app
+    ipc: host
+    restart: always
+    network_mode: host
