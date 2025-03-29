@@ -1,8 +1,10 @@
 # 🕊️ Legal Q&A Bot (KZ Laws AI Q&A)
 
-A Telegram bot that retrieves legal information using a FastAPI backend.  
+Telegram bot that retrieves legal information using a FastAPI backend.  
 
-## Setup & Run  
+## Architecture
+![Description of Image](pipe.png)
+## Setup & Run
 
 ### 1️. Prerequisites  
 - **Docker & Docker Compose** installed  
