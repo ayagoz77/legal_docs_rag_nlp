@@ -6,6 +6,8 @@ services:
     container_name: fastapi_app
     # ports:
     #   - "8000:8000"
+    env_file:
+      - .env
     restart: always
     network_mode: host
 
@@ -14,6 +16,8 @@ services:
     container_name: telegram_bot
     depends_on:
       - fastapi_app
+    env_file:
+      - .env
     ipc: host
     restart: always
     network_mode: host

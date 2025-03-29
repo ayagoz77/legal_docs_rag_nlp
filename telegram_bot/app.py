@@ -5,13 +5,17 @@ import aiohttp
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import Message
 from aiogram.filters import Command
+from dotenv import load_dotenv
+import os
 
+# Load environment variables
+load_dotenv()
 # Load configuration from YAML file
 with open("config.yml", "r", encoding="utf-8") as f:
     config = yaml.safe_load(f)
 
 # Load variables from config
-TELEGRAM_BOT_TOKEN = config["telegram_bot_token"]
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 FASTAPI_URL = config["fastapi_url"]
 
 # Initialize bot and dispatcher
@@ -35,7 +39,7 @@ async def handle_message(message: Message):
         await message.answer("Пожалуйста, отправь текстовое сообщение.")
         return
 
-    await message.answer("🔍 Обрабатываю ваш запрос...")
+    # await message.answer("🔍 Обрабатываю ваш запрос...")
 
     # Send request to FastAPI
     try:

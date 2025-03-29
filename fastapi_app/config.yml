@@ -2,8 +2,8 @@ faiss_index_path: "embeddings.bin"
 sentence_mapping_path: "data.csv"
 all_laws_path: "all_laws.csv"
 embedding_model: "intfloat/multilingual-e5-small"
-groq_api_key: "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"
+reranker_model: "cross-encoder/ms-marco-MiniLM-L-6-v2"
 llm_model_formalizing: "llama-3.1-8b-instant"
 llm_model: "llama-3.1-8b-instant"
 ner_model: "ru_core_news_md"
-default_top_k: 1
+default_top_k: 10
